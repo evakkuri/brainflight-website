@@ -1,0 +1,23 @@
+---
+interface Props {
+  iconClass?: string;
+  title: string;
+  body: string;
+}
+
+const { iconClass, title, body } = Astro.props;
+---
+
+<li>
+  {
+    iconClass ? (
+      <i class={`${iconClass} la-3x mb-4 rounded-full bg-teal-100 p-2 text-teal-700`} />
+    ) : null
+  }
+  <h2 class="mb-3 text-2xl text-teal-700">
+    {title}
+  </h2>
+  <p>
+    {body}
+  </p>
+</li>

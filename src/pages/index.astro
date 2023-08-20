@@ -1,29 +1,57 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import SectionHeader from '../components/SectionHeader.astro';
 ---
 
 <Layout title="Brainflight">
   <main>
     <section
       id="hero"
-      class="flex h-screen flex-col items-center justify-center bg-black md:flex-row md:gap-7"
+      class="flex h-screen flex-col items-center justify-center bg-black md:gap-7 lg:flex-row"
     >
       <img src="/brainflight_logo_500.jpg" alt="Brainflight logo" class="max-w-xs" />
-      <hgroup class="max-w-md px-6 text-center md:p-0 md:text-left">
+      <hgroup class="max-w-md px-6 text-center md:p-0 lg:text-left">
         <h1 class="mb-5 text-6xl font-bold text-white md:text-7xl">Brainflight</h1>
         <p class="text-2xl text-white">Software development services from the world of tomorrow</p>
       </hgroup>
     </section>
-    <section id="features">
-      <div class="container mx-auto">
-        <p class="text-3xl font-bold">
-          Brainflight is a one-man software development consultancy specializing in all things data.
+    <div class="container mx-auto max-w-6xl px-5 text-slate-700 lg:px-0">
+      <section id="headline" class="py-14">
+        <p class="text-4xl text-slate-700">
+          <span class="font-semibold text-teal-700">Brainflight</span> is a one-man software
+          development consultancy specializing in cloud and data
         </p>
-        <p>
-          Wherever you are in your data journey, I can help you. Let's make your data work for you!
-        </p>
-      </div>
-    </section>
+      </section>
+      <section id="services" class="py-14">
+        <SectionHeader
+          subheading="Services"
+          title="Wherever you are in your data journey, I can help you"
+        />
+        <ul class="grid grid-cols-1 gap-x-14 gap-y-16 lg:grid-cols-3">
+          <ServiceCard
+            iconClass="las la-map-marked"
+            title="Strategy"
+            body="Not sure where to start with your data initiatives? I can help you identify good areas for using your data and form a roadmap to take things forward."
+          />
+          <ServiceCard
+            iconClass="las la-project-diagram"
+            title="Architecture"
+            body="I have experience building data platforms in Azure and AWS, both from ground up and improving existing architecture, in multiple industries with different demands."
+          />
+          <ServiceCard
+            iconClass="las la-file-code"
+            title="Software development"
+            body="I have delivered multiple projects in data engineering, full stack web development, and machine learning engineering."
+          />
+        </ul>
+      </section>
+      <section id="projects" class="py-14">
+        <SectionHeader
+          subheading="Projects"
+          title="Successful deliveries in multiple technologies and industries"
+        />
+      </section>
+    </div>
   </main>
 </Layout>
