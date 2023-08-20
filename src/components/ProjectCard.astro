@@ -1,0 +1,14 @@
+---
+import type Project from '../types/Project';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<li>
+  <p>{project.industry}-{project.title}</p>
+  <p>{project.startTime.getMonth()}/{project.startTime.getFullYear()}</p>
+</li>

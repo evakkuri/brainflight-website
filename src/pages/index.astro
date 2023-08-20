@@ -2,6 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import SectionHeader from '../components/SectionHeader.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
+
+const latestProjects = projects
+  .sort((a, b) => !a.endTime - !b.endTime || a.endTime.localeCompare(b.endTime))
+  .slice(0, 3);
 ---
 
 <Layout title="Brainflight">
@@ -26,7 +32,7 @@ import SectionHeader from '../components/SectionHeader.astro';
       <section id="services" class="py-14">
         <SectionHeader
           subheading="Services"
-          title="Wherever you are in your data journey, I can help you"
+          title="Wherever you are in your journey, I can help you"
         />
         <ul class="grid grid-cols-1 gap-x-14 gap-y-16 lg:grid-cols-3">
           <ServiceCard
@@ -51,6 +57,8 @@ import SectionHeader from '../components/SectionHeader.astro';
           subheading="Projects"
           title="Successful deliveries in multiple technologies and industries"
         />
+        <h3>Latest projects</h3>
+        {projects.map((project) => <ProjectCard project={project} />)}
       </section>
     </div>
   </main>
