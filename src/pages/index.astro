@@ -6,15 +6,25 @@ import ProjectCard from '../components/ProjectCard.astro';
 import { projects } from '../data/projects';
 
 const latestProjects = projects
-  .sort((a, b) => !a.endTime - !b.endTime || a.endTime.localeCompare(b.endTime))
-  .slice(0, 3);
+  .sort((a, b) => {
+    if (a.endTime === undefined && b.endTime !== undefined) {
+      return -1;
+    }
+
+    if (a.endTime !== undefined && b.endTime === undefined) {
+      return 1;
+    }
+
+    return b.startTime.getTime() - a.startTime.getTime();
+  })
+  .slice(0, 2);
 ---
 
 <Layout title="Brainflight">
   <main>
     <section
       id="hero"
-      class="flex h-screen flex-col items-center justify-center bg-black md:gap-7 lg:flex-row"
+      class="flex flex-col items-center justify-center bg-black py-20 max-lg:h-screen md:gap-8 lg:flex-row"
     >
       <img src="/brainflight_logo_500.jpg" alt="Brainflight logo" class="max-w-xs" />
       <hgroup class="max-w-md px-6 text-center md:p-0 lg:text-left">
@@ -22,19 +32,19 @@ const latestProjects = projects
         <p class="text-2xl text-white">Software development services from the world of tomorrow</p>
       </hgroup>
     </section>
-    <div class="container mx-auto max-w-6xl px-5 text-slate-700 lg:px-0">
-      <section id="headline" class="py-14">
+    <div class="container mx-auto max-w-6xl px-5 text-slate-700 md:px-7">
+      <section id="headline" class="py-12">
         <p class="text-4xl text-slate-700">
           <span class="font-semibold text-teal-700">Brainflight</span> is a one-man software
           development consultancy specializing in cloud and data
         </p>
       </section>
-      <section id="services" class="py-14">
+      <section id="services" class="py-12">
         <SectionHeader
           subheading="Services"
           title="Wherever you are in your journey, I can help you"
         />
-        <ul class="grid grid-cols-1 gap-x-14 gap-y-16 lg:grid-cols-3">
+        <ul class="grid grid-cols-1 gap-x-14 gap-y-16 md:grid-cols-3">
           <ServiceCard
             iconClass="las la-map-marked"
             title="Strategy"
@@ -43,22 +53,24 @@ const latestProjects = projects
           <ServiceCard
             iconClass="las la-project-diagram"
             title="Architecture"
-            body="I have experience building data platforms in Azure and AWS, both from ground up and improving existing architecture, in multiple industries with different demands."
+            body="I have built data platforms in Azure and AWS, both from ground up and improving existing architecture , in multiple industries with different demands."
           />
           <ServiceCard
             iconClass="las la-file-code"
-            title="Software development"
-            body="I have delivered multiple projects in data engineering, full stack web development, and machine learning engineering."
+            title="Development"
+            body="I have 7+ years of successful deliveries in data engineering, full stack web development, and machine learning engineering."
           />
         </ul>
       </section>
-      <section id="projects" class="py-14">
+      <section id="projects" class="py-12">
         <SectionHeader
           subheading="Projects"
           title="Successful deliveries in multiple technologies and industries"
         />
-        <h3>Latest projects</h3>
-        {projects.map((project) => <ProjectCard project={project} />)}
+        <h3 class="text-2xl text-slate-700">Latest projects</h3>
+        <ul class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          {latestProjects.map((project) => <ProjectCard project={project} />)}
+        </ul>
       </section>
     </div>
   </main>

@@ -9,6 +9,31 @@ const { project } = Astro.props;
 ---
 
 <li>
-  <p>{project.industry}-{project.title}</p>
-  <p>{project.startTime.getMonth()}/{project.startTime.getFullYear()}</p>
+  <div class="mx-auto h-full max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
+    <div class="gap-10 p-8 md:flex">
+      <div class="justify-top md:flex md:flex-col">
+        <i
+          class=`las ${project.imageLineAwesomeClass ?? 'la-file-code'} la-4x mb-6 inline-block rounded-full bg-teal-100 p-2 text-teal-700 md:mb-0`
+        ></i>
+      </div>
+      <div>
+        <div class="mb-4">
+          <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">
+            {project.industry}
+          </p>
+          <p class="mt-1 block text-lg font-medium leading-tight">{project.title}</p>
+          <p class="mt-1 block text-gray-500">
+            {project.startTime.getMonth()}/{project.startTime.getFullYear()} - {
+              project.endTime
+                ? `
+              ${project.endTime.getMonth()}
+            /${project.endTime.getFullYear()}`
+                : 'Present'
+            }
+          </p>
+        </div>
+        <p>{project.responsibilities}</p>
+      </div>
+    </div>
+  </div>
 </li>

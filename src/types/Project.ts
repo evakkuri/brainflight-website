@@ -6,7 +6,7 @@ interface Project {
   client?: string;
   responsibilities?: string;
   keyWords?: string[];
-  image?: string;
+  imageLineAwesomeClass?: string;
 }
 
 export default Project;
