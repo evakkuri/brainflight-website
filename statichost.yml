@@ -1,0 +1,5 @@
+domains:
+  # Primary domain
+  - www.brainflight.fi
+  # Domains that redirect to the primary
+  - brainflight.fi
