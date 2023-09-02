@@ -1,5 +1,6 @@
 ---
 import type Project from '../types/Project';
+import Chip from './Chip.astro';
 
 interface Props {
   project: Project;
@@ -9,30 +10,39 @@ const { project } = Astro.props;
 ---
 
 <li>
-  <div class="mx-auto h-full max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
-    <div class="gap-10 p-8 md:flex">
+  <div
+    class="mx-auto h-full rounded-xl shadow-md transition-shadow duration-300 hover:shadow-lg md:max-w-2xl"
+  >
+    <div class="h-full gap-10 p-8 md:flex">
       <div class="justify-top md:flex md:flex-col">
         <i
           class=`las ${project.imageLineAwesomeClass ?? 'la-file-code'} la-4x mb-6 inline-block rounded-full bg-teal-100 p-2 text-teal-700 md:mb-0`
         ></i>
       </div>
-      <div>
-        <div class="mb-4">
-          <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">
-            {project.industry}
-          </p>
-          <p class="mt-1 block text-lg font-medium leading-tight">{project.title}</p>
-          <p class="mt-1 block text-gray-500">
-            {project.startTime.getMonth()}/{project.startTime.getFullYear()} - {
-              project.endTime
-                ? `
+      <div class="flex flex-col justify-between gap-6">
+        <div>
+          <div class="mb-3">
+            <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">
+              {project.industry}
+            </p>
+            <p class="mt-1 block text-lg font-medium leading-tight">{project.title}</p>
+            <p class="mt-1 block text-gray-500">
+              {project.startTime.getMonth()}/{project.startTime.getFullYear()} - {
+                project.endTime
+                  ? `
               ${project.endTime.getMonth()}
             /${project.endTime.getFullYear()}`
-                : 'Present'
-            }
-          </p>
+                  : 'Present'
+              }
+            </p>
+          </div>
+          <div>
+            <p>{project.responsibilities}</p>
+          </div>
         </div>
-        <p>{project.responsibilities}</p>
+        <div class="flex flex-wrap gap-1">
+          {project.keyWords?.map((kw) => <Chip key={kw}>{kw}</Chip>)}
+        </div>
       </div>
     </div>
   </div>

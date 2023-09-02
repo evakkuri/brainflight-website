@@ -1,0 +1,16 @@
+---
+import type { Certification } from '../data/certifications';
+
+interface Props {
+  certification: Certification;
+}
+
+const { certification } = Astro.props;
+const certAltText = `Certification badge for ${certification.name}`;
+---
+
+<figure>
+  <a href={certification.link}>
+    <img src={certification.imagePath} alt={certAltText} />
+  </a>
+</figure>

@@ -8,7 +8,7 @@ export const projects: Project[] = [
     client: 'Energy company',
     responsibilities:
       "Creating the next version of the company's Open Data portal, including architecture, databases, API's, and front-end.",
-    keyWords: ['TypeScript', 'Next.js', 'Node.js API', 'Azure Container Apps', 'Azure SQL'],
+    keyWords: ['Azure', 'TypeScript', 'Next.js', 'Express', 'Azure SQL'],
     imageLineAwesomeClass: 'la-bolt',
   },
   {
@@ -18,7 +18,7 @@ export const projects: Project[] = [
     client: 'Healthcare consultancy',
     responsibilities:
       'Assisting the client in setting up an Azure & Snowflake data platform. Key responsibilities include architecture & network planning, cloud resource setup, and data engineering.',
-    keyWords: ['Azure', 'Snowflake', 'Data Engineering'],
+    keyWords: ['Azure', 'Snowflake', 'Terraform', 'Data Engineering'],
     imageLineAwesomeClass: 'la-laptop-medical',
   },
   {
