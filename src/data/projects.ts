@@ -7,7 +7,7 @@ export const projects: Project[] = [
     startTime: new Date('2022-10-01'),
     client: 'Energy company',
     responsibilities:
-      "Full-stack development of the company's Open Data portal. Key responsiblities: architecture design, full-stack development for frontend, API, database.",
+      "Full-stack development of the company's Open Data portal. Key responsiblities: architecture design, full-stack web development (frontend, API, database).",
     keyWords: ['Azure', 'TypeScript', 'Next.js', 'Express', 'Azure SQL'],
     imageLineAwesomeClass: 'la-bolt',
   },
