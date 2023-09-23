@@ -1,14 +1,14 @@
 ---
 interface Props {
-  subheading: string;
+  subheading?: string;
   title: string;
 }
 
 const { subheading, title } = Astro.props;
 ---
 
-<hgroup class="mb-14">
-  <p class="mb-2 font-semibold uppercase text-teal-600">{subheading}</p>
+<hgroup class="mb-16">
+  {subheading && <p class="mb-2 font-semibold uppercase text-teal-600">{subheading}</p>}
   <h2 class="text-4xl text-slate-700">
     {title}
   </h2>

@@ -1,0 +1,50 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
+
+const sortedProjects = projects.sort((a, b) => {
+  if (a.endTime === undefined && b.endTime === undefined) {
+    return b.startTime.getTime() - a.startTime.getTime();
+  }
+
+  if (a.endTime === undefined && b.endTime !== undefined) {
+    return -1;
+  }
+
+  if (a.endTime !== undefined && b.endTime === undefined) {
+    return 1;
+  }
+
+  return b.endTime!!.getTime() - a.endTime!!.getTime();
+});
+
+const latestProjects = sortedProjects.slice(0, 2);
+const otherBrainflightProjects = sortedProjects.slice(2);
+---
+
+<div>
+  <div class="mb-16">
+    <h3 class="mb-4 text-xl text-slate-500">Latest assignments</h3>
+    <ul class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      {
+        latestProjects.map((project) => (
+          <li>
+            <ProjectCard project={project} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div>
+    <h3 class="mb-4 text-xl text-slate-500">Previous Brainflight assignments</h3>
+    <ul class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      {
+        otherBrainflightProjects.map((project) => (
+          <li>
+            <ProjectCard project={project} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
