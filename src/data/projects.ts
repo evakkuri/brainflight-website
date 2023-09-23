@@ -28,8 +28,8 @@ export const projects: Project[] = [
     endTime: new Date('2023-05-01'),
     client: 'Large Finnish retailer',
     responsibilities:
-      "Part of team building a modern data warehouse for a Finnish retailer's wholesale division. Key responsibilities: cloud engineering and Lambda development for integrations and Snowflake external functions.",
-    keyWords: ['AWS', 'Terraform', 'Snowflake', 'Agile Data Engine'],
+      "Part of team building a modern data warehouse for a Finnish retailer's wholesale division. Key responsibilities: cloud engineering, Lambda development.",
+    keyWords: ['AWS', 'Lambda', 'Python', 'Terraform', 'Snowflake', 'Agile Data Engine'],
     imageLineAwesomeClass: 'la-boxes',
   },
   {
@@ -40,7 +40,15 @@ export const projects: Project[] = [
     client: 'IT Services Provider',
     responsibilities:
       "Part of client's team developing new machine learning-based services for banking. Key responsibilites: machine learning engineering, API development, improving development practices.",
-    keyWords: ['Azure', 'Azure Machine Learning', 'Databricks', 'Python', 'Terraform'],
+    keyWords: [
+      'Azure',
+      'Azure Machine Learning',
+      'Databricks',
+      'Python',
+      'Terraform',
+      'Release automation',
+      'Testing',
+    ],
     imageLineAwesomeClass: 'la-university',
   },
   {
