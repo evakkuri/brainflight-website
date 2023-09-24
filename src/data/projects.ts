@@ -18,7 +18,7 @@ export const projects: Project[] = [
     client: 'Healthcare consultancy',
     responsibilities:
       'Assisting the client in setting up an Azure & Snowflake data platform. Key responsibilities: architecture & network planning, cloud resource setup, and data engineering.',
-    keyWords: ['Azure', 'Snowflake', 'Terraform', 'Data Engineering'],
+    keyWords: ['Azure', 'Snowflake', 'Terraform', 'Data Engineering', 'DevOps'],
     imageLineAwesomeClass: 'la-laptop-medical',
   },
   {
@@ -39,16 +39,8 @@ export const projects: Project[] = [
     endTime: new Date('2022-10-01'),
     client: 'IT Services Provider',
     responsibilities:
-      "Part of client's team developing new machine learning-based services for banking. Key responsibilites: machine learning engineering, API development, improving development practices.",
-    keyWords: [
-      'Azure',
-      'Azure Machine Learning',
-      'Databricks',
-      'Python',
-      'Terraform',
-      'Release automation',
-      'Testing',
-    ],
+      "Part of client's team developing new machine learning-based services for banking. Key responsibilites: ML engineering, API development.",
+    keyWords: ['Azure', 'Azure Machine Learning', 'Databricks', 'Python', 'Terraform', 'DevOps'],
     imageLineAwesomeClass: 'la-university',
   },
   {
@@ -63,3 +55,22 @@ export const projects: Project[] = [
     imageLineAwesomeClass: 'la-laptop-code',
   },
 ];
+
+const sortedProjects = projects.sort((a, b) => {
+  if (a.endTime === undefined && b.endTime === undefined) {
+    return b.startTime.getTime() - a.startTime.getTime();
+  }
+
+  if (a.endTime === undefined && b.endTime !== undefined) {
+    return -1;
+  }
+
+  if (a.endTime !== undefined && b.endTime === undefined) {
+    return 1;
+  }
+
+  return b.endTime!!.getTime() - a.endTime!!.getTime();
+});
+
+export const latestProjects = sortedProjects.slice(0, 2);
+export const otherBrainflightProjects = sortedProjects.slice(2);

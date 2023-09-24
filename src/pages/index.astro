@@ -95,7 +95,17 @@ import { certifications } from '../data/certifications';
           subheading="Projects"
           title="Successful deliveries across technologies and industries"
         />
-        <Projects />
+        <div id="projectinfo">
+          <Projects />
+          <button
+            class="rounded border border-teal-700 bg-transparent px-4 py-2 font-semibold text-teal-700 transition duration-200 hover:border-transparent hover:bg-teal-700 hover:text-white"
+            hx-get="/projects/allprojects"
+            hx-trigger="click"
+            hx-target="#projectinfo"
+          >
+            Show all projects &darr;</button
+          >
+        </div>
       </section>
     </div>
     <footer class="bg-black p-16 text-center text-4xl text-white">
