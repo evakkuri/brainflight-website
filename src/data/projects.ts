@@ -44,7 +44,7 @@ export const projects: Project[] = [
     imageLineAwesomeClass: 'la-university',
   },
   {
-    industry: 'Technology',
+    industry: 'Startup',
     title: 'Improving efficiency of machine learning solution',
     startTime: new Date('2022-04-01'),
     endTime: new Date('2022-04-01'),
