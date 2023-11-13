@@ -15,6 +15,7 @@ export const projects: Project[] = [
     industry: 'Healthcare',
     title: 'Azure data platform setup',
     startTime: new Date('2023-05-01'),
+    endTime: new Date('2023-09-01'),
     client: 'Healthcare consultancy',
     responsibilities:
       'Assisting the client in setting up an Azure & Snowflake data platform. Key responsibilities: architecture & network planning, cloud resource setup, and data engineering.',
