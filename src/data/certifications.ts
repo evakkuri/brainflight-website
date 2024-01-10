@@ -20,9 +20,4 @@ export const certifications: Certification[] = [
     imagePath: 'img/certifications/microsoft-certified-azure-data-scientist-associate.png',
     link: 'https://www.credly.com/badges/2d99b7cf-07b7-480d-a009-0171ab71c515/public_url',
   },
-  {
-    name: 'AWS Certified Solutions Architect - Associate',
-    imagePath: 'img/certifications/aws-certified-solutions-architect-associate.png',
-    link: 'https://www.credly.com/badges/54d14eba-37dd-49d3-9eca-2e7502837ad2/public_url',
-  },
 ];
