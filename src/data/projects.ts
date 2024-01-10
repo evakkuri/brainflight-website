@@ -55,6 +55,17 @@ export const projects: Project[] = [
     keyWords: ['GCP', 'Python', 'Docker', 'Natural Language Processing'],
     imageLineAwesomeClass: 'la-laptop-code',
   },
+  {
+    industry: 'Healthcare',
+    title: 'Power BI Embedded autoscaling',
+    startTime: new Date('2024-01-01'),
+    endTime: undefined,
+    client: 'Healthcare consultancy',
+    responsibilities:
+      'Setting up autoscaling for Power BI Embedded capacities. Key responsibilities: architecture planning, Infrastructure-as-Code development, performance testing.',
+    keyWords: ['Azure', 'Power BI', 'Terraform', 'DevOps'],
+    imageLineAwesomeClass: 'la-laptop-medical',
+  },
 ];
 
 const sortedProjects = projects.sort((a, b) => {
