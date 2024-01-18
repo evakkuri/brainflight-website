@@ -66,6 +66,16 @@ export const projects: Project[] = [
     keyWords: ['Azure', 'Power BI', 'Terraform', 'DevOps'],
     imageLineAwesomeClass: 'la-laptop-medical',
   },
+  {
+    industry: 'Energy',
+    title: 'Web app AKS migration',
+    startTime: new Date('2024-01-18'),
+    client: 'Energy company',
+    responsibilities:
+      'Containerizing a web application and migrating runtime platform to Azure Kubernetes Service. Key responsibilities: architecture planning, containerization, Kubernetes configuration.',
+    keyWords: ['Azure', 'Kubernetes', 'Docker', 'Typescript'],
+    imageLineAwesomeClass: 'la-bolt',
+  },
 ];
 
 const sortedProjects = projects.sort((a, b) => {
