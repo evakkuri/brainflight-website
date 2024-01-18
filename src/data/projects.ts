@@ -5,6 +5,7 @@ export const projects: Project[] = [
     industry: 'Energy',
     title: 'Open Data Portal',
     startTime: new Date('2022-10-01'),
+    endTime: new Date('2024-01-18'),
     client: 'Energy company',
     responsibilities:
       "Full-stack development of the company's Open Data portal. Key responsiblities: architecture design, full-stack web development (frontend, API, database).",
