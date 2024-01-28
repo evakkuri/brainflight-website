@@ -28,7 +28,7 @@ export const projects: Project[] = [
       'solution to AWS, Snowflake and Power BI.\n' +
       'Project highlights were close collaboration with client stakeholders and successful ' +
       'delivery of value in small packages. We received special thanks for the maintainability ' +
-      'and high quality of our documentation, making handover very efficient.',
+      'of our solution and high quality of documentation, making handover very efficient.',
     responsibilities: ['Cloud Engineering', 'Data Engineering'],
     technologies: ['AWS', 'Lambda', 'Python', 'Terraform', 'Snowflake', 'Agile Data Engine'],
     imageLineAwesomeClass: 'la-boxes',
