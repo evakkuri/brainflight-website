@@ -112,7 +112,7 @@ export const projects: Project[] = [
       "the app's codebase and architecture, and to create a strong foundation for new feature " +
       'development.',
     responsibilities: ['Architecture', 'Full Stack Development'],
-    technologies: ['Azure', 'Kubernetes', 'Docker', 'Typescript'],
+    technologies: ['Azure', 'Kubernetes', 'Docker', 'TypeScript'],
     imageLineAwesomeClass: 'la-bolt',
   },
 ];
