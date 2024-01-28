@@ -2,26 +2,19 @@ import type Project from '../types/Project';
 
 export const projects: Project[] = [
   {
-    industry: 'Energy',
-    title: 'Open Data Portal',
-    startTime: new Date('2022-10-01'),
-    endTime: new Date('2024-01-18'),
-    client: 'Energy company',
-    responsibilities:
-      "Full-stack development of the company's Open Data portal. Key responsiblities: architecture design, full-stack web development (frontend, API, database).",
-    keyWords: ['Azure', 'TypeScript', 'Next.js', 'Express', 'Azure SQL'],
-    imageLineAwesomeClass: 'la-bolt',
-  },
-  {
-    industry: 'Healthcare',
-    title: 'Azure data platform setup',
-    startTime: new Date('2023-05-01'),
-    endTime: new Date('2023-09-01'),
-    client: 'Healthcare consultancy',
-    responsibilities:
-      'Assisting the client in setting up an Azure & Snowflake data platform. Key responsibilities: architecture & network planning, cloud resource setup, and data engineering.',
-    keyWords: ['Azure', 'Snowflake', 'Terraform', 'Data Engineering', 'DevOps'],
-    imageLineAwesomeClass: 'la-laptop-medical',
+    industry: 'SaaS Startup',
+    title: 'Improving efficiency of machine learning solution',
+    startTime: new Date('2022-04-01'),
+    endTime: new Date('2022-04-30'),
+    client: 'Technology Startup',
+    allocation: 0.2,
+    description:
+      'Worked with client to improve the runtime efficiency of their machine learning solution. ' +
+      'Within a short timeframe we were able to locate and fix a severe bottleneck in the ' +
+      'solution, improving response time considerably.',
+    responsibilities: ['Machine Learning Engineering'],
+    technologies: ['GCP', 'Python', 'Docker'],
+    imageLineAwesomeClass: 'la-laptop-code',
   },
   {
     industry: 'Retail',
@@ -29,9 +22,15 @@ export const projects: Project[] = [
     startTime: new Date('2021-09-01'),
     endTime: new Date('2023-05-01'),
     client: 'Large Finnish retailer',
-    responsibilities:
-      "Part of team building a modern data warehouse for a Finnish retailer's wholesale division. Key responsibilities: cloud engineering, Lambda development.",
-    keyWords: ['AWS', 'Lambda', 'Python', 'Terraform', 'Snowflake', 'Agile Data Engine'],
+    allocation: 0.2,
+    description:
+      "Our small team modernized the client's data and reporting platform by migrating existing " +
+      'solution to AWS, Snowflake and Power BI. Project highlights were ' +
+      'close collaboration with client stakeholders and successful delivery of value in small ' +
+      'packages. We received special thanks for the maintainability and high quality of ' +
+      'documentation of our solution.',
+    responsibilities: ['Cloud Engineering', 'Data Engineering'],
+    technologies: ['AWS', 'Lambda', 'Python', 'Terraform', 'Snowflake', 'Agile Data Engine'],
     imageLineAwesomeClass: 'la-boxes',
   },
   {
@@ -40,41 +39,80 @@ export const projects: Project[] = [
     startTime: new Date('2021-09-01'),
     endTime: new Date('2022-10-01'),
     client: 'IT Services Provider',
-    responsibilities:
-      "Part of client's team developing new machine learning-based services for banking. Key responsibilites: ML engineering, API development.",
-    keyWords: ['Azure', 'Azure Machine Learning', 'Databricks', 'Python', 'Terraform', 'DevOps'],
+    allocation: 0.8,
+    description:
+      "Worked as part of client's team developing new ML-based banking services. My " +
+      "main responsibility was to bring data scientist's models to production by improving code " +
+      'quality, testing and performance. I also worked on the architecture and development of ' +
+      'the backend and data processing, and participated in setting product strategy.',
+    responsibilities: [
+      'Machine Learning Engineering',
+      'Architecture',
+      'DevOps',
+      'Data Engineering',
+    ],
+    technologies: ['Azure', 'Azure Machine Learning', 'Databricks', 'Python', 'Terraform'],
     imageLineAwesomeClass: 'la-university',
   },
   {
-    industry: 'Startup',
-    title: 'Improving efficiency of machine learning solution',
-    startTime: new Date('2022-04-01'),
-    endTime: new Date('2022-04-01'),
-    client: 'Technology Startup',
-    responsibilities:
-      'Worked with client to improve the runtime efficiency of their machine learning solution. Key responsibilities: architecture plannning, refactoring, performance testing.',
-    keyWords: ['GCP', 'Python', 'Docker', 'Natural Language Processing'],
-    imageLineAwesomeClass: 'la-laptop-code',
+    industry: 'Energy',
+    title: 'Open Data Portal',
+    startTime: new Date('2022-10-01'),
+    endTime: new Date('2024-01-18'),
+    client: 'Energy company',
+    allocation: 0.8,
+    description:
+      "Developed new version of client's Open Data portal from designs to production. " +
+      'The new version has improved user experience and a more maintanable application ' +
+      "architecture as part of client's technology landscape.",
+    responsibilities: ['Architecture', 'Full Stack Development'],
+    technologies: ['Azure', 'TypeScript', 'Next.js', 'Express', 'Azure SQL'],
+    imageLineAwesomeClass: 'la-bolt',
+  },
+  {
+    industry: 'Healthcare',
+    title: 'Azure data platform setup',
+    startTime: new Date('2023-05-01'),
+    endTime: new Date('2023-09-01'),
+    client: 'Healthcare consultancy',
+    allocation: 0.2,
+    description:
+      'PoC for setting up an Azure & Snowflake cloud data platform. ' +
+      "We evaluated if a cloud data platform would be a good alternative to client's existing " +
+      'on-premise solution from security, performance, cost, and developer experience perspectives.',
+    responsibilities: ['Architecture', 'Cybersecurity', 'Cloud Engineering', 'DevOps'],
+    technologies: ['Azure', 'Snowflake', 'Terraform'],
+    imageLineAwesomeClass: 'la-laptop-medical',
   },
   {
     industry: 'Healthcare',
     title: 'Power BI Embedded autoscaling',
     startTime: new Date('2024-01-01'),
-    endTime: undefined,
+    endTime: new Date('2024-01-31'),
+    allocation: 0.2,
     client: 'Healthcare consultancy',
-    responsibilities:
-      'Setting up autoscaling for Power BI Embedded capacities. Key responsibilities: architecture planning, Infrastructure-as-Code development, performance testing.',
-    keyWords: ['Azure', 'Power BI', 'Terraform', 'DevOps'],
+    description:
+      "PoC for setting up autoscaling for client's Power BI Embedded capacities. " +
+      'We evaluated whether it was possible to save costs by scaling capacity based on current ' +
+      'usage while maintaining a good user experience. Within a short timeframe, we were able to ' +
+      "discover what options and limitations Power BI Embedded has client's use case.",
+    responsibilities: ['Cost Optimization', 'DevOps'],
+    technologies: ['Azure', 'Power BI', 'Terraform'],
     imageLineAwesomeClass: 'la-laptop-medical',
   },
   {
     industry: 'Energy',
-    title: 'Web app AKS migration',
+    title: 'Web app lifecycle upgrade',
     startTime: new Date('2024-01-18'),
+    allocation: 1.0,
     client: 'Energy company',
-    responsibilities:
-      'Containerizing a web application and migrating runtime platform to Azure Kubernetes Service. Key responsibilities: architecture planning, containerization, Kubernetes configuration.',
-    keyWords: ['Azure', 'Kubernetes', 'Docker', 'Typescript'],
+    description:
+      'Modernizing a web application and migrating its runtime platform to ' +
+      'Azure Kubernetes Service. Primary goal is to improve maintainability by streamlining ' +
+      "the app's codebase and architecture, and to create a strong foundation for new feature " +
+      'development.',
+    responsibilities: ['Architecture', 'Full Stack Development'],
+    technologies: ['Azure', 'Kubernetes', 'Docker', 'Typescript'],
     imageLineAwesomeClass: 'la-bolt',
   },
 ];

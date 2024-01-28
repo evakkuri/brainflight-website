@@ -26,20 +26,26 @@ const { project } = Astro.props;
           </p>
           <p class="mt-1 block text-lg font-medium leading-tight">{project.title}</p>
           <p class="mt-1 block text-gray-500">
-            {project.startTime.getMonth() + 1}/{project.startTime.getFullYear()} - {
-              project.endTime
-                ? `
+            <span>
+              {project.startTime.getMonth() + 1}/{project.startTime.getFullYear()} - {
+                project.endTime
+                  ? `
               ${project.endTime.getMonth() + 1}/${project.endTime.getFullYear()}`
-                : 'Present'
-            }
+                  : 'Present'
+              }
+            </span>
           </p>
         </div>
         <div>
-          <p>{project.responsibilities}</p>
+          <p>{project.description}</p>
         </div>
       </div>
       <div class="flex flex-wrap gap-1">
-        {project.keyWords?.map((kw) => <Chip key={kw}>{kw}</Chip>)}
+        {
+          [...(project.responsibilities ?? []), ...(project.technologies ?? [])].map((kw) => (
+            <Chip key={kw}>{kw}</Chip>
+          ))
+        }
       </div>
     </div>
   </div>

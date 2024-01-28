@@ -1,0 +1,139 @@
+---
+import type Project from '../types/Project';
+import { projects } from '../data/projects';
+import Chip from './Chip.astro';
+
+const DEFAULT_ALLOCATION = 0;
+
+type WeighedKeyword = {
+  keyword: string;
+  weightedDuration: number;
+};
+
+const sortKeywordsByWeightedDuration = ({
+  keywords,
+  duration,
+  allocation,
+}: {
+  keywords: string[];
+  duration: number;
+  allocation: number;
+}) => {
+  return keywords.map((keyword) => {
+    return {
+      keyword,
+      weightedDuration: duration * allocation,
+    };
+  });
+};
+
+const getSortedKeywords = (projects: Project[]) => {
+  const sorted = projects
+    .flatMap((project) => {
+      const { industry, responsibilities, technologies } = project;
+      const duration = (project.endTime?.getTime() ?? Date.now()) - project.startTime.getTime();
+      return {
+        industries: sortKeywordsByWeightedDuration({
+          keywords: [industry],
+          duration,
+          allocation: project.allocation ?? DEFAULT_ALLOCATION,
+        }),
+        responsibilities: sortKeywordsByWeightedDuration({
+          keywords: responsibilities ?? [],
+          duration,
+          allocation: project.allocation ?? DEFAULT_ALLOCATION,
+        }),
+        technologies: sortKeywordsByWeightedDuration({
+          keywords: technologies ?? [],
+          duration,
+          allocation: project.allocation ?? DEFAULT_ALLOCATION,
+        }),
+      };
+    })
+    .reduce<{
+      industries: WeighedKeyword[];
+      responsibilities: WeighedKeyword[];
+      technologies: WeighedKeyword[];
+    }>(
+      (acc, { industries, responsibilities, technologies }) => {
+        industries.forEach(({ keyword, weightedDuration }) => {
+          const existing = acc.industries.find((r) => r.keyword === keyword);
+          if (existing) {
+            existing.weightedDuration += weightedDuration;
+          } else {
+            acc.industries.push({ keyword, weightedDuration });
+          }
+        });
+
+        responsibilities.forEach(({ keyword, weightedDuration }) => {
+          const existing = acc.responsibilities.find((r) => r.keyword === keyword);
+          if (existing) {
+            existing.weightedDuration += weightedDuration;
+          } else {
+            acc.responsibilities.push({ keyword, weightedDuration });
+          }
+        });
+
+        technologies.forEach(({ keyword, weightedDuration }) => {
+          const existing = acc.technologies.find((r) => r.keyword === keyword);
+          if (existing) {
+            existing.weightedDuration += weightedDuration;
+          } else {
+            acc.technologies.push({ keyword, weightedDuration });
+          }
+        });
+
+        return acc;
+      },
+      { industries: [], responsibilities: [], technologies: [] },
+    );
+
+  return {
+    industries: sorted.industries.sort((a, b) => b.weightedDuration - a.weightedDuration),
+    responsibilities: sorted.responsibilities.sort(
+      (a, b) => b.weightedDuration - a.weightedDuration,
+    ),
+    technologies: sorted.technologies.sort((a, b) => b.weightedDuration - a.weightedDuration),
+  };
+};
+const { industries, responsibilities, technologies } = getSortedKeywords(projects);
+---
+
+<div class="mb-16 flex flex-col gap-10">
+  <div>
+    <p class="mb-2 uppercase text-gray-500">Industries</p>
+    <ul class="flex flex-wrap gap-1">
+      {
+        industries.map(({ keyword }) => (
+          <li>
+            <Chip>{keyword}</Chip>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div>
+    <p class="mb-2 uppercase text-gray-500">Roles and responsibilities</p>
+    <ul class="flex flex-wrap gap-1">
+      {
+        responsibilities.map(({ keyword }) => (
+          <li>
+            <Chip>{keyword}</Chip>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div>
+    <p class="mb-2 uppercase text-gray-500">Key technologies</p>
+    <ul class="flex flex-wrap gap-1">
+      {
+        technologies.map(({ keyword }) => (
+          <li>
+            <Chip>{keyword}</Chip>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

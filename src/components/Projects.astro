@@ -1,5 +1,6 @@
 ---
 import ProjectCard from '../components/ProjectCard.astro';
+import ProjectTopKeyWords from './ProjectTopKeyWords.astro';
 import { latestProjects, otherBrainflightProjects } from '../data/projects';
 
 interface Props {
@@ -10,6 +11,7 @@ const { showOnlyLatest = true } = Astro.props;
 ---
 
 <div class="mb-16">
+  <ProjectTopKeyWords />
   <h3 class="mb-4 text-xl text-slate-500">Latest assignments</h3>
   <ul class="grid grid-cols-1 gap-8 lg:grid-cols-2">
     {
