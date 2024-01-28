@@ -2,6 +2,9 @@
   "name": "brainflight-website",
   "type": "module",
   "version": "0.0.1",
+  "description": "Brainflight website",
+  "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
