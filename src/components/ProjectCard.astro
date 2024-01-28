@@ -36,8 +36,8 @@ const { project } = Astro.props;
             </span>
           </p>
         </div>
-        <div>
-          <p>{project.description}</p>
+        <div class="flex flex-col gap-3">
+          {project.description?.split('\n').map((p) => <p>{p}</p>)}
         </div>
       </div>
       <div class="flex flex-wrap gap-1">
