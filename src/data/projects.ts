@@ -94,12 +94,11 @@ export const projects: Project[] = [
     allocation: 0.2,
     client: 'Healthcare consultancy',
     description:
-      "PoC for setting up autoscaling for client's Power BI Embedded capacities.\n" +
-      'We evaluated whether it was possible to save costs by scaling capacity based on current ' +
-      'usage while maintaining a good user experience. Within a short timeframe, we were able ' +
-      "to discover what options and limitations Power BI Embedded has in client's use case.",
+      "Setting up autoscaling for client's Power BI Embedded capacities.\n" +
+      'I implemented a solution that automatically scales the capacities based on the ' +
+      'workload, which is expected to result in significant cost savings.',
     responsibilities: ['Cost Optimization', 'DevOps'],
-    technologies: ['Azure', 'Power BI', 'Terraform'],
+    technologies: ['Azure', 'Power BI', 'Terraform', 'Python'],
     imageLineAwesomeClass: 'la-laptop-medical',
   },
   {
@@ -114,7 +113,7 @@ export const projects: Project[] = [
       "the app's codebase and architecture, and to create a strong foundation for new feature " +
       'development.',
     responsibilities: ['Architecture', 'Full Stack Development'],
-    technologies: ['Azure', 'Kubernetes', 'Docker', 'TypeScript'],
+    technologies: ['Azure', 'Kubernetes', 'TypeScript', 'Next.js', 'Kafka'],
     imageLineAwesomeClass: 'la-bolt',
   },
 ];
