@@ -20,4 +20,9 @@ export const certifications: Certification[] = [
     imagePath: 'img/certifications/microsoft-certified-azure-data-scientist-associate.png',
     link: 'https://www.credly.com/badges/2d99b7cf-07b7-480d-a009-0171ab71c515/public_url',
   },
+  {
+    name: 'HashiCorp Certified: Terraform Associate (003)',
+    imagePath: 'img/certifications/hashicorp-certified-terraform-associate-003.png',
+    link: 'https://www.credly.com/badges/5328822c-9202-4b77-b5bb-11eb9a2c98d4/public_url',
+  },
 ];
