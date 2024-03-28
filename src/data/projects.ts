@@ -95,8 +95,9 @@ export const projects: Project[] = [
     client: 'Healthcare consultancy',
     description:
       "Setting up autoscaling for client's Power BI Embedded capacities.\n" +
-      'I implemented a solution that automatically scales the capacities based on the ' +
-      'workload, which is expected to result in significant cost savings.',
+      'I implemented a solution that automatically scales PBIE capacities based on ' +
+      'compute load. As a result the client was able to cut PBIE costs by 30% during the first ' +
+      'month with conservative guardrails, with no observed impact to user experience.',
     responsibilities: ['Cost Optimization', 'DevOps'],
     technologies: ['Azure', 'Power BI', 'Terraform', 'Python'],
     imageLineAwesomeClass: 'la-laptop-medical',
