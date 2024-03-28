@@ -90,7 +90,7 @@ export const projects: Project[] = [
     industry: 'Healthcare',
     title: 'Power BI Embedded autoscaling',
     startTime: new Date('2024-01-01'),
-    endTime: new Date('2024-01-31'),
+    endTime: new Date('2024-02-29'),
     allocation: 0.2,
     client: 'Healthcare consultancy',
     description:
