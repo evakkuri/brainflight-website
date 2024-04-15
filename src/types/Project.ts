@@ -6,7 +6,8 @@ type Responsibility =
   | 'Cloud Engineering'
   | 'Full Stack Development'
   | 'Cybersecurity'
-  | 'Cost Optimization';
+  | 'Cost Optimization'
+  | 'Strategy';
 
 interface Project {
   industry: string;

@@ -1,6 +1,6 @@
 import type Project from '../types/Project';
 
-export const projects: Project[] = [
+const projects: Project[] = [
   {
     industry: 'SaaS Startup',
     title: 'Improving efficiency of machine learning solution',
@@ -116,9 +116,25 @@ export const projects: Project[] = [
     technologies: ['Azure', 'Kubernetes', 'TypeScript', 'Next.js', 'Kafka'],
     imageLineAwesomeClass: 'la-bolt',
   },
+  {
+    industry: 'Manufacturing',
+    title: 'AI strategy definition',
+    startTime: new Date('2024-02-01'),
+    endTime: new Date('2024-03-31'),
+    allocation: 0.1,
+    client: 'Manufacturing company',
+    description: [
+      'Worked as part of consultant team to help client define AI strategy,',
+      'focus areas and development operating model.\n',
+      'Participated as subject-matter expert in client interviews and workshops.',
+    ].join(' '),
+    responsibilities: ['Strategy'],
+    technologies: ['GenAI'],
+    imageLineAwesomeClass: 'la-industry',
+  },
 ];
 
-const sortedProjects = projects.sort((a, b) => {
+export const sortedProjects = projects.sort((a, b) => {
   if (a.endTime === undefined && b.endTime === undefined) {
     return b.startTime.getTime() - a.startTime.getTime();
   }
