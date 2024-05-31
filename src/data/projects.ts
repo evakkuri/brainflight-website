@@ -59,7 +59,6 @@ const projects: Project[] = [
     industry: 'Energy',
     title: 'Open Data Portal',
     startTime: new Date('2022-10-01'),
-    endTime: new Date('2024-01-18'),
     client: 'Energy company',
     allocation: 0.8,
     description:
@@ -105,6 +104,7 @@ const projects: Project[] = [
     industry: 'Energy',
     title: 'Web app lifecycle upgrade',
     startTime: new Date('2024-01-18'),
+    endTime: new Date('2024-04-12'),
     allocation: 1.0,
     client: 'Energy company',
     description:
