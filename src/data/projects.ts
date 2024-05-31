@@ -108,9 +108,9 @@ const projects: Project[] = [
     allocation: 1.0,
     client: 'Energy company',
     description:
-      'Modernizing a web application and migrating its runtime platform to ' +
-      'Azure Kubernetes Service.\nPrimary goal is to improve maintainability by streamlining ' +
-      "the app's codebase and architecture, and to create a strong foundation for new feature " +
+      'Modernized a web application and migrated its runtime platform to ' +
+      'Azure Kubernetes Service.\nThe new version has a streamlined ' +
+      'codebase and architecture, enabling easier maintainability and new feature ' +
       'development.',
     responsibilities: ['Architecture', 'Full Stack Development'],
     technologies: ['Azure', 'Kubernetes', 'TypeScript', 'Next.js', 'Kafka'],
