@@ -59,6 +59,7 @@ const projects: Project[] = [
     industry: 'Energy',
     title: 'Open Data Portal',
     startTime: new Date('2022-10-01'),
+    endTime: new Date('2024-06-10'),
     client: 'Energy company',
     allocation: 0.8,
     description:
@@ -131,6 +132,34 @@ const projects: Project[] = [
     responsibilities: ['Strategy'],
     technologies: ['GenAI'],
     imageLineAwesomeClass: 'la-industry',
+  },
+  {
+    industry: 'Software Consulting',
+    title: 'Azure AI concept development',
+    startTime: new Date('2024-06-01'),
+    endTime: new Date('2024-06-30'),
+    allocation: 0.1,
+    client: 'Consulting company',
+    description:
+      'Participated as SME in developing AI service offering for the client.\n' +
+      'My contribution included a high-level architecture, technology stack, and case examples.',
+    responsibilities: ['Architecture', 'Strategy'],
+    technologies: ['Azure', 'GenAI'],
+    imageLineAwesomeClass: 'la-laptop-code',
+  },
+  {
+    industry: 'Energy',
+    title: 'Monitoring system development',
+    startTime: new Date('2024-06-10'),
+    client: 'Energy company',
+    allocation: 1,
+    description:
+      'Developing internal monitoring systems for the client, used by operators in daily work.\n' +
+      'The systems integrate extensively with Kafka for real-time data processing and ' +
+      'visualization.',
+    responsibilities: ['Architecture', 'Full Stack Development'],
+    technologies: ['TypeScript', 'Java', 'Kafka', 'Kafka Streams', 'Kubernetes'],
+    imageLineAwesomeClass: 'la-bolt',
   },
 ];
 
