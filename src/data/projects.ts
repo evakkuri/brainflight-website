@@ -164,10 +164,7 @@ const projects: Project[] = [
 ];
 
 export const sortedProjects = projects.sort((a, b) => {
-  if (a.endTime === undefined && b.endTime === undefined) {
-    return b.startTime.getTime() - a.startTime.getTime();
-  }
-
+  // If only one project is ongoing, the ongoing project comes first
   if (a.endTime === undefined && b.endTime !== undefined) {
     return -1;
   }
@@ -176,7 +173,8 @@ export const sortedProjects = projects.sort((a, b) => {
     return 1;
   }
 
-  return b.endTime!!.getTime() - a.endTime!!.getTime();
+  // Otherwise, sort by start date descending
+  return b.startTime!!.getTime() - a.startTime!!.getTime();
 });
 
 export const latestProjects = sortedProjects.slice(0, 2);
