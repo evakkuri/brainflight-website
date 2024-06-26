@@ -157,7 +157,7 @@ const projects: Project[] = [
       'Developing internal monitoring systems for the client, used by operators in daily work.\n' +
       'The systems integrate extensively with Kafka for real-time data processing and ' +
       'visualization.',
-    responsibilities: ['Architecture', 'Full Stack Development'],
+    responsibilities: ['Full Stack Development'],
     technologies: ['TypeScript', 'Java', 'Kafka', 'Kafka Streams', 'Kubernetes'],
     imageLineAwesomeClass: 'la-bolt',
   },
