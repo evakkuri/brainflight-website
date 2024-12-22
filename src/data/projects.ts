@@ -53,7 +53,7 @@ const projects: Project[] = [
       'Data Engineering',
     ],
     technologies: ['Azure', 'Azure Machine Learning', 'Databricks', 'Python', 'Terraform'],
-    imageLineAwesomeClass: 'la-university',
+    imageLineAwesomeClass: 'la-donate',
   },
   {
     industry: 'Energy',
@@ -135,7 +135,7 @@ const projects: Project[] = [
   },
   {
     industry: 'Software Consulting',
-    title: 'Azure AI concept development',
+    title: 'AI offering development',
     startTime: new Date('2024-06-01'),
     endTime: new Date('2024-06-30'),
     allocation: 0.1,
@@ -149,17 +149,28 @@ const projects: Project[] = [
   },
   {
     industry: 'Energy',
-    title: 'Monitoring system development',
+    title: 'Internal system development',
     startTime: new Date('2024-06-10'),
     client: 'Energy company',
     allocation: 1,
     description:
-      'Developing internal monitoring systems for the client, used by operators in daily work.\n' +
-      'The systems integrate extensively with Kafka for real-time data processing and ' +
+      'Developing internal systems for the client, used by operators in daily work.\n' +
+      'Worked extensively with Kafka for real-time data processing and ' +
       'visualization.',
     responsibilities: ['Full Stack Development'],
-    technologies: ['TypeScript', 'Java', 'Kafka', 'Kafka Streams', 'Kubernetes'],
+    technologies: ['Kafka', 'TypeScript', 'Java', 'Kubernetes'],
     imageLineAwesomeClass: 'la-bolt',
+  },
+  {
+    industry: 'Insurance',
+    title: 'AI strategy definition',
+    startTime: new Date('2024-11-01'),
+    client: 'Insurance company',
+    allocation: 0.1,
+    imageLineAwesomeClass: 'la-balance-scale',
+    description: 'Participating as AI architect SME in defining AI strategy and focus areas.',
+    responsibilities: ['Strategy'],
+    technologies: ['GenAI'],
   },
 ];
 
