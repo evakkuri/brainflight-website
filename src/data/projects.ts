@@ -158,7 +158,7 @@ const projects: Project[] = [
       'Worked extensively with Kafka for real-time data processing and ' +
       'visualization.',
     responsibilities: ['Full Stack Development'],
-    technologies: ['Kafka', 'TypeScript', 'Java', 'Kubernetes'],
+    technologies: ['Kafka', 'TypeScript', 'Kubernetes', 'Java'],
     imageLineAwesomeClass: 'la-bolt',
   },
   {
@@ -168,7 +168,8 @@ const projects: Project[] = [
     client: 'Insurance company',
     allocation: 0.1,
     imageLineAwesomeClass: 'la-balance-scale',
-    description: 'Participating as AI architect SME in defining AI strategy and focus areas.',
+    description:
+      'AI architect SME in defining strategy, focus areas and architecture roadmap.',
     responsibilities: ['Strategy'],
     technologies: ['GenAI'],
   },
