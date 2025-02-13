@@ -165,7 +165,7 @@ const projects: Project[] = [
     industry: 'Insurance',
     title: 'AI strategy definition',
     startTime: new Date('2024-11-01'),
-    endTime: new Date('2025-01-29'),
+    endTime: new Date('2025-01-30'),
     client: 'Insurance company',
     allocation: 0.1,
     imageLineAwesomeClass: 'la-balance-scale',
