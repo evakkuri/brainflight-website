@@ -165,11 +165,11 @@ const projects: Project[] = [
     industry: 'Insurance',
     title: 'AI strategy definition',
     startTime: new Date('2024-11-01'),
+    endTime: new Date('2025-01-29'),
     client: 'Insurance company',
     allocation: 0.1,
     imageLineAwesomeClass: 'la-balance-scale',
-    description:
-      'AI architect SME in defining strategy, focus areas and architecture roadmap.',
+    description: 'AI architect SME in defining strategy, focus areas and architecture roadmap.',
     responsibilities: ['Strategy'],
     technologies: ['GenAI'],
   },
