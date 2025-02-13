@@ -37,7 +37,7 @@
   "runArgs": ["--userns=keep-id"],
   "mounts": [
     "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached,Z",
-    "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached,readonly,Z",
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached,readonly,Z",
   ],
   "workspaceFolder": "/workspace",
   "containerUser": "vscode",
