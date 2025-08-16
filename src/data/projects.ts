@@ -151,6 +151,7 @@ const projects: Project[] = [
     industry: 'Energy',
     title: 'Internal system development',
     startTime: new Date('2024-06-10'),
+    endTime: new Date('2025-02-28'),
     client: 'Energy company',
     allocation: 1,
     description:
@@ -172,6 +173,17 @@ const projects: Project[] = [
     description: 'AI architect SME in defining strategy, focus areas and architecture roadmap.',
     responsibilities: ['Strategy'],
     technologies: ['GenAI'],
+  },
+  {
+    industry: 'Gaming',
+    title: 'Machine Learning Engineering',
+    startTime: new Date('2025-03-01'),
+    client: 'Gaming company',
+    allocation: 1,
+    imageLineAwesomeClass: 'la-gamepad',
+    description: 'Implementing ML systems and improving MLOps practices across company portfolio. Strong focus on experimentation and provable results.',
+    responsibilities: ['Machine Learning Engineering', 'Architecture'],
+    technologies: ['Python', 'Databricks', 'AWS', 'GCP', 'Anyscale', 'GenAI'],
   },
 ];
 
