@@ -2,7 +2,7 @@ import type Project from '../types/Project';
 
 const projects: Project[] = [
   {
-    industry: 'SaaS Startup',
+    industry: 'IT Services',
     title: 'Improving efficiency of machine learning solution',
     startTime: new Date('2022-04-01'),
     endTime: new Date('2022-04-30'),
@@ -134,7 +134,7 @@ const projects: Project[] = [
     imageLineAwesomeClass: 'la-industry',
   },
   {
-    industry: 'Software Consulting',
+    industry: 'IT Services',
     title: 'AI offering development',
     startTime: new Date('2024-06-01'),
     endTime: new Date('2024-06-30'),
@@ -170,7 +170,7 @@ const projects: Project[] = [
     client: 'Insurance company',
     allocation: 0.1,
     imageLineAwesomeClass: 'la-balance-scale',
-    description: 'AI architect SME in defining strategy, focus areas and architecture roadmap.',
+    description: 'AI architect SME in defining strategy, focus areas and architecture roadmap. Designed roadmap in collaboration with client architects and presented to business unit leadership.',
     responsibilities: ['Strategy'],
     technologies: ['GenAI'],
   },
