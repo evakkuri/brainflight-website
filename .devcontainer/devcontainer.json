@@ -34,17 +34,14 @@
     },
   },
 
-
   "mounts": [
-
     "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached,readonly,Z",
   ],
-
 
   "workspaceMount": "",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "runArgs": [
-      // other args
-      "--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"
-  ]
+    // other args
+    "--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z",
+  ],
 }
