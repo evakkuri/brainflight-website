@@ -1,4 +1,4 @@
-import type Project from '../types/Project';
+import type { Project } from '../types/Project';
 
 const projects: Project[] = [
   {
@@ -170,7 +170,8 @@ const projects: Project[] = [
     client: 'Insurance company',
     allocation: 0.1,
     imageLineAwesomeClass: 'la-balance-scale',
-    description: 'AI architect SME in defining strategy, focus areas and architecture roadmap. Designed roadmap in collaboration with client architects and presented to business unit leadership.',
+    description:
+      'AI architect SME in defining strategy, focus areas and architecture roadmap. Designed roadmap in collaboration with client architects and presented to business unit leadership.',
     responsibilities: ['Strategy'],
     technologies: ['GenAI'],
   },
@@ -178,12 +179,24 @@ const projects: Project[] = [
     industry: 'Gaming',
     title: 'Machine Learning Engineering',
     startTime: new Date('2025-03-01'),
+    endTime: new Date('2026-03-15'),
     client: 'Gaming company',
     allocation: 1,
     imageLineAwesomeClass: 'la-gamepad',
-    description: 'Implementing ML systems and improving MLOps practices across company portfolio. Strong focus on experimentation and provable results.',
+    description:
+      'Implementing ML systems and improving MLOps practices across company portfolio. Strong focus on experimentation and provable results.',
     responsibilities: ['Machine Learning Engineering', 'Architecture'],
     technologies: ['Python', 'Databricks', 'AWS', 'GCP', 'Anyscale', 'GenAI'],
+  },
+  {
+    industry: 'Startup',
+    title: 'Building a startup as CTO',
+    startTime: new Date('2026-03-16'),
+    client: 'Own startup',
+    allocation: 1,
+    imageLineAwesomeClass: 'la-hat-wizard',
+    description: "Trying to build something of my own, let's see how it goes!",
+    responsibilities: ['CTO'],
   },
 ];
 

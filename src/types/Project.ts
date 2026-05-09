@@ -7,9 +7,10 @@ type Responsibility =
   | 'Full Stack Development'
   | 'Cybersecurity'
   | 'Cost Optimization'
-  | 'Strategy';
+  | 'Strategy'
+  | 'CTO';
 
-interface Project {
+export interface Project {
   industry: string;
   title: string;
   startTime: Date;
@@ -21,5 +22,3 @@ interface Project {
   technologies?: string[];
   imageLineAwesomeClass?: string;
 }
-
-export default Project;
