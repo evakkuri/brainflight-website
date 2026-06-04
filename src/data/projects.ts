@@ -190,13 +190,15 @@ const projects: Project[] = [
   },
   {
     industry: 'Startup',
-    title: 'Building a startup as CTO',
+    title: 'Co-Founder & CTO',
     startTime: new Date('2026-03-16'),
-    client: 'Own startup',
+    client: 'Stellaris',
     allocation: 1,
     imageLineAwesomeClass: 'la-hat-wizard',
-    description: "Trying to build something of my own, let's see how it goes!",
-    responsibilities: ['CTO'],
+    description:
+      'Chief Technology Officer for a scrappy startup in AI-powered enterprise risk management. Responsible for all things technical. Heavy focus on AI in both product and development.',
+    responsibilities: ['CTO', 'Architecture', 'Full Stack Development'],
+    technologies: ['GenAI', 'React', 'Typescript', 'Kubernetes', 'SQL'],
   },
 ];
 
