@@ -105,7 +105,7 @@ import { testimonials } from '../data/testimonials';
           subheading="Testimonials"
           title="What clients and colleagues say"
         />
-        <ul class="grid grid-cols-1 gap-x-14 gap-y-16 md:grid-cols-3">
+        <ul class="flex flex-col gap-12">
           {testimonials.map((testimonial) => (
             <TestimonialCard testimonial={testimonial} />
           ))}
