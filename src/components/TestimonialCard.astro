@@ -1,0 +1,32 @@
+---
+import type { Testimonial } from "../data/testimonials";
+
+interface Props {
+  testimonial: Testimonial;
+}
+
+const { testimonial } = Astro.props;
+---
+
+<li class="flex flex-col justify-between rounded-xl bg-white p-8 shadow-md transition-shadow duration-300 hover:shadow-lg">
+  <blockquote class="flex-1">
+    <p class="text-slate-700 leading-relaxed">
+      "{testimonial.quote}"
+    </p>
+  </blockquote>
+  <div class="mt-6">
+    {testimonial.linkedinUrl ? (
+      <a
+        href={testimonial.linkedinUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-semibold text-teal-700 hover:underline"
+      >
+        {testimonial.name}
+      </a>
+    ) : (
+      <p class="font-semibold text-teal-700">{testimonial.name}</p>
+    )}
+    <p class="text-sm italic text-slate-500">{testimonial.role}</p>
+  </div>
+</li>
