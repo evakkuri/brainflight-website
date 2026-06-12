@@ -1,0 +1,47 @@
+---
+import type { Testimonial } from "../data/testimonials";
+import TestimonialQuote from "./TestimonialQuote.astro";
+
+interface Props {
+  testimonial: Testimonial;
+}
+
+const { testimonial } = Astro.props;
+---
+
+<li class="flex flex-col justify-between rounded-xl bg-white p-8 shadow-md transition-shadow duration-300 hover:shadow-lg">
+  <blockquote class="flex-1">
+    <TestimonialQuote testimonial={testimonial} />
+  </blockquote>
+  <div class="mt-6">
+    {testimonial.linkedinUrl ? (
+      <a
+        href={testimonial.linkedinUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group inline-flex items-center gap-1 font-semibold text-teal-700 hover:underline"
+      >
+        {testimonial.name}
+        <span class="text-sm opacity-50 transition-opacity group-hover:opacity-100">↗</span>
+      </a>
+    ) : (
+      <p class="font-semibold text-teal-700">{testimonial.name}</p>
+    )}
+    <p class="text-sm italic text-slate-500">{testimonial.role}</p>
+  </div>
+</li>
+
+<script>
+  // Hide "Show more" when the clamped quote doesn't actually overflow.
+  function updateShowMoreButtons() {
+    document.querySelectorAll<HTMLButtonElement>("button[data-show-more]").forEach((button) => {
+      const quote = button.parentElement?.querySelector("p");
+      if (!quote) return;
+      button.style.display = quote.scrollHeight > quote.clientHeight ? "" : "none";
+    });
+  }
+
+  updateShowMoreButtons();
+  window.addEventListener("resize", updateShowMoreButtons);
+  document.body.addEventListener("htmx:afterSwap", updateShowMoreButtons);
+</script>

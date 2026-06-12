@@ -4,7 +4,9 @@ import ServiceCard from '../components/ServiceCard.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import Projects from '../components/Projects.astro';
 import Certification from '../components/Certification.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
 import { certifications } from '../data/certifications';
+import { testimonials } from '../data/testimonials';
 ---
 
 <Layout title="Brainflight">
@@ -96,6 +98,17 @@ import { certifications } from '../data/certifications';
             title="Development"
             body="Experience from 7+ years of successful deliveries in data engineering, machine learning engineering, and full stack web development."
           />
+        </ul>
+      </section>
+      <section id="testimonials">
+        <SectionHeader
+          subheading="Testimonials"
+          title="What clients and colleagues say"
+        />
+        <ul class="flex flex-col gap-12">
+          {testimonials.map((testimonial) => (
+            <TestimonialCard testimonial={testimonial} />
+          ))}
         </ul>
       </section>
       <section id="projects">

@@ -1,0 +1,47 @@
+---
+import type { Testimonial } from "../data/testimonials";
+
+interface Props {
+  testimonial: Testimonial;
+  expanded?: boolean;
+}
+
+const { testimonial, expanded = false } = Astro.props;
+
+const quoteClasses = "whitespace-pre-line text-slate-700 leading-relaxed";
+const buttonClasses =
+  "mt-2 text-sm text-slate-500 hover:text-teal-700 hover:underline md:hidden";
+---
+
+<div id={`testimonial-quote-${testimonial.id}`}>
+  {
+    expanded ? (
+      <>
+        <p class={quoteClasses}>"{testimonial.quote}"</p>
+        <button
+          class={buttonClasses}
+          hx-get={`/testimonials/${testimonial.id}/collapsed`}
+          hx-trigger="click"
+          hx-target={`#testimonial-quote-${testimonial.id}`}
+          hx-swap="outerHTML"
+        >
+          Show less &uarr;
+        </button>
+      </>
+    ) : (
+      <>
+        <p class={`line-clamp-5 md:line-clamp-none ${quoteClasses}`}>"{testimonial.quote}"</p>
+        <button
+          data-show-more
+          class={buttonClasses}
+          hx-get={`/testimonials/${testimonial.id}`}
+          hx-trigger="click"
+          hx-target={`#testimonial-quote-${testimonial.id}`}
+          hx-swap="outerHTML"
+        >
+          Show more &darr;
+        </button>
+      </>
+    )
+  }
+</div>

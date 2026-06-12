@@ -1,0 +1,17 @@
+---
+import TestimonialQuote from '../../../components/TestimonialQuote.astro';
+import { testimonials } from '../../../data/testimonials';
+
+export const partial = true;
+
+export function getStaticPaths() {
+  return testimonials.map((testimonial) => ({
+    params: { id: testimonial.id },
+    props: { testimonial },
+  }));
+}
+
+const { testimonial } = Astro.props;
+---
+
+<TestimonialQuote testimonial={testimonial} />
