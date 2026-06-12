@@ -18,6 +18,7 @@
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
+    "@playwright/cli": "^0.1.14",
     "prettier": "^3.0.2",
     "prettier-plugin-astro": "^0.11.1",
     "prettier-plugin-tailwindcss": "^0.5.3"
