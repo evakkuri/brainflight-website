@@ -10,11 +10,12 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "browser": "playwright-cli -s=brainflight"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.4.2",
+    "astro": "^7.4.12",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {

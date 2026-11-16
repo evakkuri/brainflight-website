@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import Projects from '../components/Projects.astro';
+import RecentExperience from '../components/RecentExperience.astro';
 import Certification from '../components/Certification.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import { certifications } from '../data/certifications';
@@ -39,8 +40,13 @@ import { testimonials } from '../data/testimonials';
           <div class="flex flex-col gap-4">
             <div>
               <p><span class="text-2xl text-teal-700">Elias Vakkuri</span></p>
-              <p class="text-lg italic text-slate-500">Software consultant, owner</p>
+              <p class="text-lg italic text-slate-500">Software engineer · Brainflight owner</p>
             </div>
+            <p>
+              I currently work as a Software Engineer at QMill. Brainflight is my independent
+              consultancy, and this site brings together my professional background and consulting
+              work.
+            </p>
             <p>
               I design and build solutions in the intersection of cloud and data. I've been working
               with digital strategy and solutions since 2014 and implementing data platforms in
@@ -78,15 +84,12 @@ import { testimonials } from '../data/testimonials';
         </div>
       </section>
       <section id="services">
-        <SectionHeader
-          subheading="Services"
-          title="Wherever you are in your journey, I can help you"
-        />
+        <SectionHeader subheading="Expertise" title="From strategy to implementation" />
         <ul class="grid grid-cols-1 gap-x-14 gap-y-16 md:grid-cols-3">
           <ServiceCard
             iconClass="las la-map-marked"
             title="Strategy"
-            body="Not sure where to start with your data initiatives? I can help you identify good areas for using your data and form a roadmap to take things forward."
+            body="Experience identifying opportunities for data and AI, defining focus areas, and developing practical roadmaps."
           />
           <ServiceCard
             iconClass="las la-project-diagram"
@@ -96,24 +99,26 @@ import { testimonials } from '../data/testimonials';
           <ServiceCard
             iconClass="las la-file-code"
             title="Development"
-            body="Experience from 7+ years of successful deliveries in data engineering, machine learning engineering, and full stack web development."
+            body="Experience since 2017 of successful deliveries in data engineering, machine learning engineering, and full stack web development."
           />
         </ul>
       </section>
       <section id="testimonials">
-        <SectionHeader
-          subheading="Testimonials"
-          title="What clients and colleagues say"
-        />
+        <SectionHeader subheading="Testimonials" title="What clients and colleagues say" />
         <ul class="flex flex-col gap-12">
-          {testimonials.map((testimonial) => (
-            <TestimonialCard testimonial={testimonial} />
-          ))}
+          {testimonials.map((testimonial) => <TestimonialCard testimonial={testimonial} />)}
         </ul>
+      </section>
+      <section id="experience">
+        <SectionHeader
+          subheading="Recent experience"
+          title="Current and recent roles outside Brainflight"
+        />
+        <RecentExperience />
       </section>
       <section id="projects">
         <SectionHeader
-          subheading="Projects"
+          subheading="Brainflight projects"
           title="Successful deliveries across technologies and industries"
         />
         <div id="projectinfo">
@@ -131,8 +136,8 @@ import { testimonials } from '../data/testimonials';
     </div>
     <footer class="bg-black p-16 text-center text-4xl text-white">
       <p>
-        Interested in working with me?
-        <a href="mailto:elias.vakkuri@brainflight.fi" class="underline">Contact me via email!</a>
+        Let's stay in touch.
+        <a href="mailto:elias.vakkuri@brainflight.fi" class="underline">Contact me via email.</a>
       </p>
     </footer>
   </main>

@@ -188,18 +188,6 @@ const projects: Project[] = [
     responsibilities: ['Machine Learning Engineering', 'Architecture'],
     technologies: ['Python', 'Databricks', 'AWS', 'GCP', 'Anyscale', 'GenAI'],
   },
-  {
-    industry: 'Startup',
-    title: 'Co-Founder & CTO',
-    startTime: new Date('2026-03-16'),
-    client: 'Stellaris',
-    allocation: 1,
-    imageLineAwesomeClass: 'la-hat-wizard',
-    description:
-      'Chief Technology Officer for a scrappy startup in AI-powered enterprise risk management. Responsible for all things technical. Heavy focus on AI in both product and development.',
-    responsibilities: ['CTO', 'Architecture', 'Full Stack Development'],
-    technologies: ['GenAI', 'React', 'Typescript', 'Kubernetes', 'SQL'],
-  },
 ];
 
 export const sortedProjects = projects.sort((a, b) => {
